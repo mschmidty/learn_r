@@ -3,8 +3,13 @@ library(sf)
 library(raster)
 library(tidyverse)
 library(elevatr)
+##library(USAboundaries)
 
 theme_set(theme_void())
+
+## You can also get us_state shapes with the USAboundaries package. 
+# usa<-us_states()%>%
+#   st_as_sf()
 usa<-ne_states(country="united states of america", returnclass="sf")
 
 usa%>%
